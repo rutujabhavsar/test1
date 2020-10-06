@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div>
+		<h1 class="regForm">Registration Form</h1>
+	</div>
+	<div class="main">
+		<form class="form" name="regForm" >
+
+			<div id="name">
+
+				<h2 class="name">Name</h2>
+
+				<input type="text" class="firstname" name="first_name">
+				<label class="firstlabel">first name</label>
+
+				<input type="text" class="lastname"name="last_name" onblur="user_id()">
+				<label class="lastlabel" >last name</label>
+
+			</div>
+
+			<h2 class="name" id="username">Username: </h2>
+			<input type="text" class="username" name="username">
+
+			<h2 class="name">Email: </h2>
+			<input type="email" class="email" placeholder="abc@example.com" name="email"> <span></span><small class="small_email">Enter your email address</small></span>
+
+			<h2 class="name">Phone no.: </h2>
+			<input type="text" class="phone_no" placeholder="0123456789" name="phone_no"><span><small>Enter your mobile no.</small></span>
+
+			<h2 class="name">DOB: </h2>
+			<input type="date" class="date" name="dob"><span><small >Select your date of birth</small></span>
+
+			<h2 class="name">Enter Password:</h2>
+			<input type="password" class="password" name="password" placeholder="********" onkeyup='check();' id="password">
+			
+
+			<h2 class="name">Re-Enter Password: </h2>
+			<input type="password" name="re-password" class="re-password" placeholder="********" onkeyup='check();' id="re-password">
+			<small><p id="pass_warning"></p></small>
+			
+
+			<button type="submit" onclick="registration() ">Register</button>
+
+		</form>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+</html>
